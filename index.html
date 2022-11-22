@@ -1,25 +1,44 @@
 <html>
-    <head>
-        <title>Calculadora de IMC</title>
-        <meta charset="utf-8"/>    
-        <link rel="stylesheet" href="style.css"> <!-- AQUI VOCÊ  CRIA UMA PÁGINA CSS PARA COLOCAR ESTILO NO SE PROJETO-->
-    </head>
-        
-   <div id="borda"> 
-<table border="0">
-    <body>   
-            <tr> <td> <h3>Calculadora de IMC</h3>
 
-            Altura (M)<br/>
-            <input type: "number" > </br> 
+<head>
+	<title>Calculadora de IMC</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css"> <!-- AQUI VOCÊ  CRIA UMA PÁGINA CSS PARA COLOCAR ESTILO NO SE PROJETO-->
+</head>
 
-            Peso (kg)<br/>
-            <input type: "number" > </br> </br>
+<body>
+	<div id="borda">
+		<table>
+			<tr>
+				<td>
+					<h3>Calculadora de IMC</h3>
 
-            <input type= "submit" value="Calcular"> </td> 
-            </tr>
-         
-    </table>
-</div>     
-        </body>
+					Altura (M)<br />
+					<input id="height" type="number"> </br>
+
+					Peso (kg)<br />
+					<input id="weight" type="number"> </br> </br>
+
+					<p id="message"> </p>
+
+					<input onclick="calculateIMC()" type="submit" value="Calcular">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script>		
+		function calculateIMC(){
+			const height = document.getElementById("height").value
+		  const weight = document.getElementById("weight").value
+			const imc = (weight / (height * height))
+  if (imc <= 18.5){
+		  document.getElementById("message").style.color = "#ff0000";
+      document.getElementById("message").innerHTML = `Seu imc é: ${Math.round(imc * 100) / 100}, seu peso está abaixo do permitido`
+	} else {
+    alert(imc)
+  }
+		}
+	</script>
+</body>
+
 </html>
