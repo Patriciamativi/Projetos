@@ -1,0 +1,10 @@
+#borda {                
+    border: 6px groove rgb(168, 50, 247);
+    border-radius: 5px;
+    width: 223px;                               
+}
+td {
+    border-style: groove;
+    border-radius: 5px;
+    background-color: rgb(216, 166, 240);
+}
