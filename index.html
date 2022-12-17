@@ -26,33 +26,7 @@
 			</tr>
 		</table>
 	</div>
-	<script>
-		function calculateIMC() {
-			const height = document.getElementById("height").value
-			const weight = document.getElementById("weight").value
-			const imc = (weight / (height * height))
-			if (imc <= 18.5) {
-				document.getElementById("message").style.color = "#ff0000";
-				document.getElementById("message").innerHTML = `Seu imc é: ${Math.round(imc * 100) / 100}, seu peso está baixo`
-			} else if (imc < 25) {
-				classification = 'peso normal'
-				document.getElementById("message").style.color = "#3CB371";
-			} else if (imc < 30) {
-				classification = 'Acima do peso'
-				document.getElementById("message").style.color = "#ff0000";
-			} else if (imc < 35) {
-				classification = 'Obesidade grau I'
-				document.getElementById("message").style.color = "#ff0000";
-			} else if (imc > 30 && imc < 39) {
-				classification = 'Obesidade grau II'
-				document.getlementById("message").style.color = "#ff0000";
-			} else if (imc > 40) {
-				classification = 'Obesidade grau III'
-			} else {
-				resultado.innerHTML = 'Preencha os campos'
-			}
-		}
-	</script>
+	<script src="soma.js"></script>
 </body>
 
 </html>
