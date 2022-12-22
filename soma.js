@@ -1,4 +1,6 @@
-function calculateIMC() {
+document.getElementById("formImc").addEventListener("submit", function (event) {
+	event.preventDefault()
+
 	const height = document.getElementById("height").value
 	const weight = document.getElementById("weight").value
 	const imc = (weight / (height * height))
@@ -20,4 +22,4 @@ function calculateIMC() {
 	} else {
 		document.getElementById("message").innerHTML = 'Preencha os campos'
 	}
-}
+});

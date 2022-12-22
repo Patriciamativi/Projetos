@@ -7,23 +7,28 @@
 </head>
 
 <body>
-	<h1>Patricia mativi</h1>
-	<div class="container"></div>
-	<div id="">
-	
-					<h3>Calculadora de IMC</h3>
 
-					Altura (M)<br />
-					<input id="height" type="number"> </br>
-
-					Peso (kg)<br />
-					<input id="weight" type="number"> </br> </br>
-
-					 <p id="message"> </p>
-
-					<input onclick="calculateIMC()" type="submit" value="Calcular">
-				
+	<div>
+		<div class="wave"></div>
+		<div class="wave"></div>
+		<div class="wave"></div>
 	</div>
+
+	<div class="container">
+
+		<h3>Calculadora de IMC</h3>
+
+		<form onscroll="calculateIMC()" id="formImc" class="form-imc">
+			<label for="fname">Sua altura (M):</label>
+			<input type="number" step="0.01" id="height" name="fname">
+			<label for="lname">Seu peso (KG):</label>
+			<input type="number" id="weight" name="lname">
+			<p id="message"> </p>
+			<input type="submit" value="Submit">
+		</form>
+
+	</div>
+
 	<script src="soma.js"></script>
 </body>
 
