@@ -17,11 +17,22 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+      width: 50%;
 }
 
 .form-imc {
   display: flex;
+  width: 100%;
+  padding: 1rem;
   flex-direction: column;
+  color: #fff;
+  background: #0000008f;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+#message {
+  max-width: 100%;
 }
 
 input {
