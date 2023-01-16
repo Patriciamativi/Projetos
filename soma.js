@@ -1,7 +1,10 @@
 function calculateIMC() {
+  event.preventDefault()
+  
   const height = document.getElementById("height").value;
   const weight = document.getElementById("weight").value;
   const imc = weight / (height * height);
+
   if (imc <= 18.5) {
     document.getElementById("message").style.color = "#ff0000";
     document.getElementById("message").innerHTML = `Seu imc é: ${
